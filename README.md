@@ -22,5 +22,7 @@ Your website will be ready to use on `build` folder.
 
 ## Dependencies
 
-- [React.js](https://reactjs.org/docs/create-a-new-react-app.html) - Javascript library.
-- [Material UI](https://material-ui.com/getting-started/installation/) - UI dependency for React.js.
+- [React.js](https://reactjs.org/docs/create-a-new-react-app.html)
+- [Material UI](https://material-ui.com/getting-started/installation/)
+- [styled-components](https://styled-components.com/)
+- [React Query](https://react-query.tanstack.com/)
