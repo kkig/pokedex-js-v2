@@ -15,6 +15,7 @@ const Header = styled.header`
 
 const Main = styled.main`
   min-height: 100%;
+  display: flex;
 `;
 
 function App() {
