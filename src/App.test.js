@@ -3,7 +3,7 @@ import App from './App';
 
 import ReactDOM from 'react-dom';
 
-import Card from './components/Card';
+import CardSection from './components/CardSection';
 
 test('renders learn react link', () => {
   render(<App />);
@@ -13,5 +13,5 @@ test('renders learn react link', () => {
 
 test('renders the correct content.', () => {
   const root = document.createElement('div');
-  ReactDOM.render(<Card />, root);
+  ReactDOM.render(<CardSection />, root);
 });

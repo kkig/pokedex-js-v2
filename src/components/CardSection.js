@@ -1,8 +1,18 @@
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+import Card from '@material-ui/core/Card';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import styled from 'styled-components';
 
 const queryClient = new QueryClient();
 
-const Card = () => {
+const PokeCard = styled(Card)`
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 0.025rem;
+`;
+
+const CardSection = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <PokeList />
@@ -20,17 +30,17 @@ const fetchPokemon = async () => {
 const PokeList = () => {
   const { status, data, error } = useQuery('pokeData', fetchPokemon);
 
-  if (status === 'loading') return 'Loading Pokemon...';
+  if (status === 'loading') return <CircularProgress />;
   if (status === 'error') return `Error: ${error.message}`;
   console.log(data);
 
   return (
-    <ul>
+    <div>
       {data.results.map((pokemon) => (
-        <li key={pokemon.name}>{pokemon.name}</li>
+        <PokeCard key={pokemon.name}>{pokemon.name}</PokeCard>
       ))}
-    </ul>
+    </div>
   );
 };
 
-export default Card;
+export default CardSection;

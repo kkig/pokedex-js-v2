@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Card from './components/Card';
+import CardSection from './components/CardSection';
 
 const Header = styled.header`
   text-align: center;
@@ -16,6 +16,7 @@ const Header = styled.header`
 const Main = styled.main`
   min-height: 100%;
   display: flex;
+  justify-content: center;
 `;
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
         <h3 className='app-title'>Pokédex</h3>
       </Header>
       <Main>
-        <Card />
+        <CardSection />
       </Main>
     </div>
   );
